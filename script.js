@@ -8,13 +8,18 @@ let saveBtn = document.querySelector(".save-button");
 
 let count = 0;
 
+// events
+incrementBtn.addEventListener("click", incrementCount);
+decrementBtn.addEventListener("click", decrementCount);
+resetBtn.addEventListener("click", resetCount);
+
 function incrementCount() {
   count++;
   countElem.textContent = count;
 }
 
 function decrementCount() {
-  if (count < 0) {
+  if (count > 0) {
     count--;
   }
   countElem.textContent = count;
